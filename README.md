@@ -1,5 +1,5 @@
 # VizImpots
-Python app that shows cities french cities tax rates on a choropleth map
+Python app that shows french cities tax rates on a choropleth map and other statistics
 
 # Data Source : 
 
