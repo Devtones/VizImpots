@@ -28,14 +28,13 @@ from bokeh.embed import server_document
 
 app = Flask(__name__)
 
-
 # Définition de variables globales
 displaySet = []
 #impot par défaut
 impot = 'TauxTH_' 
 #palette
 defaultPalette = brewer['RdYlGn'][7] #7 couleurs Vert-Jaune-Rouge
-
+# gestion de la commune par défaut
 dist = 10
 ogCity = []
 # années pour lesquelles on dispose des données
@@ -539,8 +538,7 @@ def bkapp(doc):
     global defaultPalette
     global ogCity
 
-    # Paramètres par défaut
-    dist = 10
+    # Paramètres par défaut    
     ogCity = dataCities[dataCities["nom"]=='Paris'].iloc[0] # Paris sélectionnée par défaut
     # paramètre affiché par défaut = taxe d'habitation la plus récente
     defaultParam = impot + str(data_yr[-1])
@@ -623,5 +621,5 @@ if __name__ == '__main__':
     print('Opening single process Flask app with embedded Bokeh application on http://localhost:8000/')
     print()
     print('Multiple connections may block the Bokeh app in this configuration!')
-    app.run(debug=True,port=8000)
+    app.run(port=8000)
 # %%
