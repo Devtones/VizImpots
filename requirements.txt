@@ -2,5 +2,5 @@ geopandas==0.7.0
 pandas==1.0.3
 numpy==1.18.1
 flask==1.1.2
-tornado==6.0.4
+tornado==6.3.2
 bokeh==2.0.1
